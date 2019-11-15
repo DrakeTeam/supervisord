@@ -22,8 +22,8 @@ jobs:
       - checkout
 
       # specify any bash command here prefixed with `run: `
-      - run: go get -v -t -d ./...
-      - run: go test -v ./...
+      #- run: go get -v -t -d ./...
+      - run: go version
       - run: go get github.com/mitchellh/gox
       - run: go get github.com/tcnksm/ghr
       - run: gox -output "dist/supervisord_{{.OS}}_{{.Arch}}" -osarch="linux/amd64 linux/arm darwin/amd64"
