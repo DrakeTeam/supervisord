@@ -26,6 +26,7 @@ jobs:
       - run: go version
       - run: go get github.com/mitchellh/gox
       - run: go get github.com/tcnksm/ghr
+      - run: gox -h
       - run: gox -os="linux" -osarch="linux/arm"
       - run: ghr -t $GITHUB_TOKEN -u $CIRCLE_PROJECT_USERNAME -r $CIRCLE_PROJECT_REPONAME --replace v1.0.0 dist/
       - run: pwd
