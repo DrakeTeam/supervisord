@@ -28,7 +28,7 @@ jobs:
       - run: go get github.com/tcnksm/ghr
       - run: pwd
       - run: ls -la
-      - run: gox -h   
+#      - run: gox -h   
       - run: gox -osarch="linux/arm"
       - run: ghr -t $GITHUB_TOKEN -u $CIRCLE_PROJECT_USERNAME -r $CIRCLE_PROJECT_REPONAME --replace v1.0.0 dist/
 #      - store_artifacts:
