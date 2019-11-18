@@ -30,8 +30,8 @@ jobs:
       - run: pwd
       - run: ls -la
 #      - run: gox -h   
-      - run: gox -osarch="linux/amd64"
-      - run: ghr -t $GITHUB_TOKEN -u $CIRCLE_PROJECT_USERNAME -r $CIRCLE_PROJECT_REPONAME --replace v1.0.0 dist/
+      - run: gox -osarch="linux/amd64 linux/arm"
+      - run: ghr -t $GITHUB_TOKEN -u $CIRCLE_PROJECT_USERNAME -r $CIRCLE_PROJECT_REPONAME -delete ${VERSION} ./artifacts/
 #      - store_artifacts:
 #            path: dist/supervisord_linux_arm
 #            destination: ExeFile
