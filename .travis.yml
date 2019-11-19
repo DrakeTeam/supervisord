@@ -19,11 +19,11 @@ after_success:
   
 deploy:
   provider: releases
-  api_key: ${api_key}
+  api_key: $GITHUB_API_KEY
   file: "supervisord"
   skip_cleanup: true
   draft: true
-#  on:
-#    all_branches: true
-#    tags: true
+  on:
+    all_branches: true
+    tags: true
 
