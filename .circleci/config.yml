@@ -35,4 +35,4 @@ jobs:
       - run: ghr -t $GITHUB_TOKEN -u $CIRCLE_PROJECT_USERNAME -r $CIRCLE_PROJECT_REPONAME --replace v1.0.0 ./dist/
       - store_artifacts:
             path: dist/supervisord_linux_arm
-            destination: Exe4Daq2
+            destination: supervisord_linux_arm
